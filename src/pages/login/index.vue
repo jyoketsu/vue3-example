@@ -14,14 +14,7 @@ const user = computed(() => store.state.auth.user);
 
 watch(user, (newVal, oldVal) => {
   if (newVal && !oldVal) {
-    const url = localStorage.getItem("EXPIRED_URL");
-    if (url) {
-      const path = url.replace(`${window.location.origin}/#`, "");
-      router.push(path);
-      localStorage.removeItem("EXPIRED_URL");
-    } else {
-      router.push("/notes");
-    }
+    router.push("/");
   }
 });
 

@@ -22,7 +22,6 @@ const mutations: MutationTree<AuthState> = {
     state.user = null;
     state.expired = true;
     localStorage.clear();
-    localStorage.setItem("EXPIRED_URL", window.location.href);
   },
   setUploadToken(state, data) {
     state.uploadToken = data;

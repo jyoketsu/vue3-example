@@ -11,6 +11,7 @@ import { computed, onMounted, onUnmounted } from "vue";
 import { useRouter } from "vue-router";
 import { useStore } from "../../store";
 import { getDeviceType } from "../../utils/util";
+const BASE = import.meta.env.VITE_BASE;
 
 const store = useStore();
 const router = useRouter();
@@ -23,7 +24,7 @@ const handleLogin = () => {
     router.push("/notes");
   } else {
     const redirect = encodeURIComponent(
-      `${window.location.protocol}//${window.location.host}/#/login`
+      `${window.location.protocol}//${window.location.host}${BASE}#/login`
     );
     const logo = "https://notes.qingtime.cn/icons/logo2.svg";
     const APP = import.meta.env.VITE_APP;

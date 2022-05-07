@@ -25,6 +25,8 @@ Vue3-example。使用`vite`，基于 `vue3 + TypeScript + vue-router + vuex + el
 - [Element-Plus](https://element-plus.org/zh-CN/) - ui
 - [vue-i18n](https://kazupon.github.io/vue-i18n/zh/introduction.html#%E8%B5%9E%E5%8A%A9%E5%95%86) Language
 
+## [online-demo](https://jyoketsu.github.io/vue3-example/)
+
 ## 安装
 
 ```
@@ -42,3 +44,7 @@ yarn dev
 ```
 yarn deploy
 ```
+
+## 注意
+
+将本项目用户新建项目时，注意将.env 文件中的`VITE_BASE=/vue3-example/`改为`VITE_BASE=/`，原因见[github-pages](https://cn.vitejs.dev/guide/static-deploy.html#github-pages)，.github/workflows 中的部署至 github-pages 也改为自己的部署。
